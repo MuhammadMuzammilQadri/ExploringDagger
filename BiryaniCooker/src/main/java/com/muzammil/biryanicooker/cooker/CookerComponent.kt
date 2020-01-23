@@ -1,6 +1,6 @@
 package com.muzammil.biryanicooker.cooker
 
-import com.muzammil.biryanicooker.CoffeeMaker
+import com.muzammil.biryanicooker.BriyaniCooker
 import com.muzammil.biryanicooker.FireComponent
 import dagger.Component
 
@@ -11,7 +11,7 @@ import dagger.Component
 @Component(modules = [CookerModule::class],
            dependencies = [FireComponent::class])
 interface CookerComponent {
-    fun inject(coffeeMaker: CoffeeMaker)
+    fun inject(briyaniCooker: BriyaniCooker)
     
     @Component.Builder
     interface Builder {

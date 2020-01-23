@@ -27,7 +27,6 @@ abstract class FireModule {
         
         @Provides
         @JvmStatic
-        @FireScope
         fun provideFire(air: Air, wood: Wood): Fire {
             return Lava("lava", air, wood)
         }
