@@ -7,8 +7,8 @@ import javax.inject.Inject
  */
 class Cauldron @Inject constructor(val fire: Fire, val air: Air) : Pot, Printable {
     
-    @Inject
-    lateinit var fireAlt: Fire
+    @set:Inject
+    var fireAlt: Fire? = null
     @Inject
     lateinit var airAlt: Air
     
@@ -17,7 +17,7 @@ class Cauldron @Inject constructor(val fire: Fire, val air: Air) : Pot, Printabl
         println("== Fire ==")
         fire.print()
         println("== Alt Fire ==")
-        fireAlt.print()
+        fireAlt?.print()
         println("== Air ==")
         air.print()
         println("== Alt Air ==")
